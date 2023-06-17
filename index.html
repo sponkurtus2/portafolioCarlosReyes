@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      html {
+        height: 100%;
+      }
+
+      body {
+        background: linear-gradient(-95deg, #558776, #a3a847, #7f8b52, #eae2b6);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        min-height: 100%;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Animacion scrolling css */
+      .hiddenn {
+        opacity: 0;
+        filter: blur(3px);
+        transform: translateX(-100%);
+        transition: all 2s;
+      }
+
+      .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+      }
+
+      /* Added CSS for responsiveness */
+      @media (max-width: 768px) {
+        .flex-col {
+          flex-direction: column;
+        }
+        .h-screen {
+          height: auto;
+        }
+        .justify-center {
+          justify-content: center;
+        }
+        .items-center {
+          align-items: center;
+        }
+        .mt-4 {
+          margin-top: 1rem;
+        }
+        .grid-cols-1 {
+          grid-template-columns: 1fr;
+        }
+        .md\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .space-y-4 {
+          margin-top: 1rem;
+        }
+        .text-center {
+          text-align: center;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output-style.css" />
+    <title>Portafolio</title>
+  </head>
+  <body>
+    <section class="hiddenn">
+      <div class="flex flex-col justify-center items-center h-screen">
+        <h1
+          class="font-sans text-5xl antialiased font-bold not-italic tracking-normal text-center text-slate-950 mt-5"
+        >
+          Hey, I'm Carlos :D
+        </h1>
+        <h2
+          class="text-2xl text-gray-600 mt-5 font-sans antialiased tracking-normal text-center"
+        >
+          I love coding and cats.
+        </h2>
+        <hr class="border-b mt-4 w-1/2 border-teal-950" />
+
+        <div class="flex justify-center mt-4">
+          <div
+            class="w-1/3 h-16 bg-emerald-900 flex items-center justify-center font-serif px-4"
+          >
+            <a
+              href="https://www.instagram.com/carlitos_04r/"
+              class="text-white hover:text-lime-500 subpixel-antialiased font-medium"
+              >Instagram</a
+            >
+          </div>
+          <div
+            class="w-1/3 h-16 bg-teal-900 flex items-center justify-center font-serif px-4"
+          >
+            <a
+              href="https://github.com/sponkurtus2"
+              class="text-white hover:text-lime-500 subpixel-antialiased font-medium"
+              >Github</a
+            >
+          </div>
+          <div
+            class="w-1/3 h-16 bg-lime-900 flex items-center justify-center font-serif px-4"
+          >
+            <a
+              href="https://www.facebook.com/drake.junior.336"
+              class="text-white hover:text-lime-500 subpixel-antialiased font-medium"
+              >Facebook</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hiddenn">
+      <div class="flex justify-center items-center h-screen">
+        <div
+          class="max-w-screen-xl bg-teal-950 rounded-lg overflow-hidden shadow-xl p-10"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="p-6 flex flex-col justify-center items-center">
+              <img
+                src="./yo.jpg"
+                class="w-52 h-52 rounded-full object-cover object-center mb-8"
+              />
+              <p class="text-4xl font-semibold text-white text-center">
+                Carlos Reyes
+              </p>
+              <p
+                class="mt-6 text-xl leading-relaxed text-gray-200 text-center overflow-auto max-h-96"
+                id="aboutMeText"
+              >
+                Hi! I'm Carlos Eduardo Reyes Quintero, a 19-year-old guy
+                currently studying at UTCH. I enjoy coding in my free time and
+                also engage in other fun activities like reading manga and
+                hanging out with my friends. I reside in Chihuahua, Chihuahua,
+                and my personal mission is to become a skilled software engineer
+                and have the opportunity to work in another country. This way, I
+                can learn and enjoy many wonderful things that life has to
+                offer.
+              </p>
+            </div>
+            <div class="flex justify-center items-center">
+              <div class="flex flex-col space-y-4">
+                <a
+                  class="px-6 py-3 text-xl text-white bg-teal-700 rounded-xl hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-800"
+                  onclick="changeText('About Me')"
+                  >About Me</a
+                >
+                <a
+                  class="px-6 py-3 text-xl text-white bg-teal-700 rounded-xl hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-800"
+                  onclick="changeText('Technologies')"
+                  >Technologies</a
+                >
+                <a
+                  class="px-6 py-3 text-xl text-white bg-teal-700 rounded-xl hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-800"
+                  onclick="changeText('Projects')"
+                  >Projects</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
