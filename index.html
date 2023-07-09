@@ -203,6 +203,58 @@
         </div>
       </div>
     </section>
+
+   <section class="hiddenn">
+    <div class="flex justify-center items-center h-screen">
+      <div
+        class="max-w-screen-xl bg-teal-950 rounded-lg overflow-hidden shadow-xl p-10"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div class="p-6 flex flex-col justify-center items-center">
+            <img
+              src="./yo.jpg"
+              class="w-52 h-52 rounded-full object-cover object-center mb-8"
+            />
+            <p class="text-4xl font-semibold text-white text-center">
+              Proyectos
+            </p>
+            <p
+              class="mt-6 text-xl leading-relaxed text-gray-200 text-center overflow-auto max-h-96"
+              id="aboutMeText"
+            >
+              <ul>
+                <li>a</li>
+                <li>a</li>
+                <li>a</li>
+              </ul>
+            </p>
+          </div>
+          <div class="flex justify-center items-center">
+            <div class="flex flex-col space-y-4">
+              <button
+                class="px-6 py-3 text-xl text-white bg-teal-700 rounded-xl hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-800"
+                onclick="changeText('About Me')"
+              >
+                About Me
+              </button>
+              <button
+                class="px-6 py-3 text-xl text-white bg-teal-700 rounded-xl hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-800"
+                onclick="changeText('Technologies')"
+              >
+                Technologies
+              </button>
+              <button
+                class="px-6 py-3 text-xl text-white bg-teal-700 rounded-xl hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-800"
+                onclick="changeText('Projects')"
+              >
+                Projects
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
     <script type="module" src="./script.js"></script>
     <script type="module" src="./main.js"></script>
   </body>
